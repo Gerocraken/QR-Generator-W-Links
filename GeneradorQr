@@ -1,0 +1,16 @@
+import qrcode
+from datetime import datetime
+
+while True:
+    o = input("\n1.Contacto\n2.Texto/URL\n3.Salir\n> ")
+    if o=="1":
+        n,t,e = input("Nombre: "),input("Tel: "),input("Email: ")
+        v = f"BEGIN:VCARD\nVERSION:3.0\nFN:{n}\nTEL:{t}\nEMAIL:{e}\nEND:VCARD"
+        f = f"vcard_{n.replace(' ','')}{datetime.now().strftime('%Y%m%d%H%M%S')}.png"
+    elif o=="2":
+        v = input("Texto o URL: ")
+        f = f"qr_text_{datetime.now().strftime('%Y%m%d%H%M%S')}.png"
+    elif o=="3": break
+    else: print("Opción inválida"); continue
+    img = qrcode.make(v).convert("RGB"); img.save(f); img.show()
+    print("QR guardado como:", f)
