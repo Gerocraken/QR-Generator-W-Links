@@ -1,0 +1,46 @@
+QR Code Generator
+A simple and interactive Python script to generate customized QR codes with custom colors and sizes.
+
+Features
+✅ Interactive menu for easy use
+✅ Custom colors for QR code and background
+✅ Adjustable size with box_size parameter
+✅ Automatic display and file saving
+✅ Support for any text or URL
+Requirements
+Install the required packages:
+
+Or:
+
+How to use
+1. Run the program
+2. Interactive menu
+The program presents a simple menu:
+
+1 - Generate QR code
+2 - Exit
+3. QR code generation
+When generating a QR code, you'll be prompted for:
+
+Text/URL: The content to encode
+Filename: Output file name (e.g., qr.png)
+Size: Box size for each QR module (e.g., 10)
+QR Color: Color of the QR code (default: black)
+Background Color: Background color (default: white)
+Example usage
+Color options
+You can use any color name supported by PIL:
+
+Standard colors: black, white, red, blue, green, yellow, etc.
+Extended colors: darkblue, lightgray, orange, purple, etc.
+Hex colors: #FF0000, #00FF00, #0000FF, etc.
+RGB tuples: (255, 0, 0), (0, 255, 0), etc.
+Project structure
+Dependencies
+qrcode: QR code generation library
+Pillow (PIL): Image processing library
+License
+This project is open source and available under the MIT License.
+
+Contributing
+Feel free to fork this project and submit pull requests for improvements!
